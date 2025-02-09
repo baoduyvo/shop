@@ -4,7 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="887c4173-68ab-48a7-963f-c0a85041baeb" name="Changes" comment="" />
+    <list default="true" id="887c4173-68ab-48a7-963f-c0a85041baeb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/ShopApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/controllers/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/category/CategoryCreateReponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/category/CategoryUpdateReponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/utils/Pagination.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/utils/RestResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/utils/ResultPaginationDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/request/category/CategoryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/CartDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/exception/GlobaleException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/exception/error/IDException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/exception/error/NameException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/repositories/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/repositories/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/test/java/com/example/shop/ShopApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/dtos/request/user/UserCreateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/dtos/request/user/UserCreateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fontend/supergearyt" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/supergearyt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,43 +49,65 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Exception" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2rIn7HussxB2i6rNSPM6spOY3gY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.JwtApplication.executor&quot;: &quot;Run&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/java/project/backend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Notification.DisplayName-DoNotAsk-Database detector": "Database detector",
+    "Notification.DoNotAsk-Database detector": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.ApiGatewayApplication.executor": "Run",
+    "Spring Boot.JwtApplication.executor": "Run",
+    "Spring Boot.ShopApplication.executor": "Run",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/java/project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.25287357",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.VCS",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java\project\backend\shop\src\main\java\com\example\shop\dtos\reponse" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.shop.dtos.reponse.category" />
       <recent name="com.example.apigateway.configuration" />
     </key>
   </component>
@@ -57,11 +115,15 @@
     <option name="configurationTypes">
       <set>
         <option value="Application" />
+        <option value="KtorApplicationConfigurationType" />
         <option value="MavenRunConfiguration" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.JwtApplication">
+  <component name="RunManager" selected="Spring Boot.ShopApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="api-gateway" />
@@ -80,6 +142,14 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShopApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="shop" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.shop.ShopApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -126,10 +196,31 @@
       <workItem from="1737387502419" duration="1772000" />
       <workItem from="1738763670447" duration="239000" />
       <workItem from="1738823376066" duration="287000" />
+      <workItem from="1738931864513" duration="272000" />
+      <workItem from="1738983022639" duration="374000" />
+      <workItem from="1738983444175" duration="803000" />
+      <workItem from="1738984285119" duration="541000" />
+      <workItem from="1738984973288" duration="1233000" />
+      <workItem from="1738986231558" duration="744000" />
+      <workItem from="1738987018035" duration="65000" />
+      <workItem from="1738987426835" duration="264000" />
+      <workItem from="1738987877103" duration="76000" />
+      <workItem from="1738988283548" duration="121000" />
+      <workItem from="1738988427323" duration="220000" />
+      <workItem from="1738988745601" duration="158000" />
+      <workItem from="1738988926216" duration="33000" />
+      <workItem from="1738988987341" duration="1119000" />
+      <workItem from="1738990325753" duration="6225000" />
+      <workItem from="1739015988301" duration="9605000" />
+      <workItem from="1739073363571" duration="6651000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

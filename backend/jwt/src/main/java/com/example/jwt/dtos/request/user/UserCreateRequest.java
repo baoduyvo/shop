@@ -1,6 +1,5 @@
 package com.example.jwt.dtos.request.user;
 
-import com.example.jwt.entities.Role;
 import com.example.jwt.utils.constants.GenderEnum;
 import jakarta.validation.constraints.*;
 import lombok.*;
