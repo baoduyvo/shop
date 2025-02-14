@@ -32,7 +32,7 @@ public class ProductController {
 
     ProductService productService;
     CategoryService categoryService;
-
+// abc
     @PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE}, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<RestResponse<ProductCreateReponse>> create(
             @RequestParam(value = "image") MultipartFile file,
