@@ -5,40 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="887c4173-68ab-48a7-963f-c0a85041baeb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/ShopApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/controllers/CategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/category/CategoryCreateReponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/category/CategoryUpdateReponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/utils/Pagination.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/utils/RestResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/utils/ResultPaginationDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/request/category/CategoryRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/CartDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/exception/GlobaleException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/exception/error/IDException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/exception/error/NameException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/repositories/CategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/repositories/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/test/java/com/example/shop/ShopApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/configuration/MessageSourceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/controllers/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/product/ProductCreateReponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/product/ProductUpdateReponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/request/product/ProductCreateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/request/product/ProductUpdateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/repositories/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/utils/FileHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/resources/errors.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/resources/static/images/default.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/configuration/DatabaseInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/configuration/DatabaseInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/dtos/request/user/UserCreateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/dtos/request/user/UserCreateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/configuration/DatabaseInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/configuration/DatabaseInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/dtos/request/user/UserCreateRequest$UserCreateRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/dtos/request/user/UserCreateRequest$UserCreateRequestBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/dtos/request/user/UserCreateRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/dtos/request/user/UserCreateRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/exception/GlobaleException.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/exception/GlobaleException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fontend/supergearyt" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/supergearyt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,9 +36,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Exception" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -104,9 +91,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java\project\backend\shop\src\main\resources\static\images" />
       <recent name="D:\java\project\backend\shop\src\main\java\com\example\shop\dtos\reponse" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.shop.dtos.reponse.product" />
+      <recent name="com.example.shop.dtos.request.product" />
       <recent name="com.example.shop.dtos.reponse.category" />
       <recent name="com.example.apigateway.configuration" />
     </key>
@@ -213,6 +203,15 @@
       <workItem from="1738990325753" duration="6225000" />
       <workItem from="1739015988301" duration="9605000" />
       <workItem from="1739073363571" duration="6651000" />
+      <workItem from="1739080889388" duration="895000" />
+      <workItem from="1739089239911" duration="8994000" />
+      <workItem from="1739159121861" duration="4392000" />
+      <workItem from="1739281064707" duration="3899000" />
+      <workItem from="1739340499479" duration="5365000" />
+      <workItem from="1739419370105" duration="10562000" />
+      <workItem from="1739450034029" duration="3813000" />
+      <workItem from="1739506583290" duration="9629000" />
+      <workItem from="1739554956974" duration="33000" />
     </task>
     <servers />
   </component>

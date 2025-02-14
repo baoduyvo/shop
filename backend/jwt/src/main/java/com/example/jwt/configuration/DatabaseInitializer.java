@@ -44,7 +44,7 @@ public class DatabaseInitializer implements CommandLineRunner {
         if (countPermissions == 0) {
             ArrayList<Permission> arr = new ArrayList<>();
             arr.add(new Permission("Create a user", "/jwt/users", "POST", "USERS"));
-            arr.add(new Permission("Update a user", "/jwt/users", "PUT", "USERS"));
+            arr.add(new Permission("Update a user", "/jwt/users/{id}", "PUT", "USERS"));
             arr.add(new Permission("Delete a user", "/jwt/users/{id}", "DELETE", "USERS"));
             arr.add(new Permission("Get a user by id", "/jwt/users/{id}", "GET", "USERS"));
             arr.add(new Permission("Get user with pagination", "/jwt/users", "GET", "USERS"));

@@ -52,7 +52,7 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.OK).body(RestResponse.<ResultPaginationDTO>builder()
                 .statusCode(HttpStatus.OK.value())
                 .error("99999")
-                .data(null)
+                .data(userService.fillAllUsers(pageable))
                 .message("Select User Successfully")
                 .build());
     }

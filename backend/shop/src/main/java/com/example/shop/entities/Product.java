@@ -34,4 +34,14 @@ public class Product {
     @OneToMany(mappedBy = "product",fetch = FetchType.LAZY)
     @JsonIgnore
     private List<CartDetail> cartDetailList;
+
+    @PrePersist
+    public void handleBeforeCreate() {
+        this.createdAt = Instant.now();
+    }
+
+    @PreUpdate
+    public void handleBeforeUpdate() {
+        this.updatedAt = Instant.now();
+    }
 }
