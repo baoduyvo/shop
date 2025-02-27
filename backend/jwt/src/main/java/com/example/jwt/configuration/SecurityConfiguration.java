@@ -28,7 +28,7 @@ public class SecurityConfiguration {
     };
 
     private String[] getWhiteList = {
-            "/users",
+            "/users", "/test"
     };
 
     @Bean
@@ -41,7 +41,7 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(
                         authz -> authz
                                 .requestMatchers(HttpMethod.POST, postWhiteList).permitAll()
-//                                .requestMatchers(HttpMethod.GET, getWhiteList).permitAll()
+                                .requestMatchers(HttpMethod.GET, getWhiteList).permitAll()
                                 .anyRequest().authenticated())
                 .oauth2ResourceServer((oauth2) -> oauth2.jwt(
                                 jwtConfigurer -> jwtConfigurer

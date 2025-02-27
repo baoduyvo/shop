@@ -23,6 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
         <module name="shop" />
+        <module name="redis-cache" />
       </profile>
     </annotationProcessing>
   </component>
@@ -30,6 +31,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
       <module name="jwt" options="-parameters" />
+      <module name="redis-cache" options="-parameters" />
       <module name="shop" options="-parameters" />
     </option>
   </component>

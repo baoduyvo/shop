@@ -1,0 +1,89 @@
+package com.example.shop.controllers;
+
+import com.example.shop.models.Cart;
+import com.example.shop.models.Product;
+import com.example.shop.services.CartService;
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("carts")
+@RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
+@Slf4j
+public class CartController {
+
+    CartService cartService;
+
+    // Tạo giỏ hàng mới
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public Cart createCart() {
+        log.info("Creating a new cart");
+        return cartService.createCart();
+    }
+
+    // Lấy thông tin giỏ hàng theo ID
+    @GetMapping("/{cartId}")
+    public Cart getCart(@PathVariable Long cartId) {
+        log.info("Fetching cart with id: {}", cartId);
+        return cartService.getCart(cartId);
+    }
+
+    // Thêm sản phẩm vào giỏ hàng
+    @PostMapping("/{cartId}/products")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Cart addProductToCart(@PathVariable Long cartId, @RequestBody Product product) {
+        log.info("Adding product to cart with id: {}", cartId);
+        return cartService.addProductToCart(cartId, product);
+    }
+
+    // Xóa sản phẩm khỏi giỏ hàng
+    @DeleteMapping("/{cartId}/products/{productId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void removeProductFromCart(@PathVariable Long cartId, @PathVariable Long productId) {
+        log.info("Removing product with id: {} from cart with id: {}", productId, cartId);
+        cartService.removeProductFromCart(cartId, productId);
+    }
+
+    // Cập nhật số lượng sản phẩm trong giỏ hàng
+    @PutMapping("/{cartId}/products/{productId}")
+    public Cart updateProductQuantity(@PathVariable Long cartId, @PathVariable Long productId, @RequestParam int quantity) {
+        log.info("Updating product with id: {} in cart with id: {} to quantity: {}", productId, cartId, quantity);
+        return cartService.updateProductQuantity(cartId, productId, quantity);
+    }
+
+    // Xóa giỏ hàng
+    @DeleteMapping("/{cartId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteCart(@PathVariable Long cartId) {
+        log.info("Deleting cart with id: {}", cartId);
+        cartService.deleteCart(cartId);
+    }
+
+    // Lấy tất cả sản phẩm trong giỏ hàng
+    @GetMapping("/{cartId}/products")
+    public List<Product> getProductsInCart(@PathVariable Long cartId) {
+        log.info("Fetching all products in cart with id: {}", cartId);
+        return cartService.getProductsInCart(cartId);
+    }
+
+    // Tính tổng giá trị giỏ hàng
+    @GetMapping("/{cartId}/total")
+    public double getCartTotal(@PathVariable Long cartId) {
+        log.info("Fetching total price for cart with id: {}", cartId);
+        return cartService.calculateCartTotal(cartId);
+    }
+}
+
+
+$sql = 'INSERT INTO cart_detail
+    (product_name,price,quantity,image,status,product_id,user_id,created_at)
+    VALUES
+    (:product_name,:price,:quantity,:image,:status,:product_id,:user_id,:created_at)';

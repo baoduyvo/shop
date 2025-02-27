@@ -4,6 +4,7 @@ import com.example.shop.dtos.reponse.category.CategoryCreateReponse;
 import com.example.shop.dtos.reponse.product.ProductCreateReponse;
 import com.example.shop.dtos.reponse.product.ProductUpdateReponse;
 import com.example.shop.dtos.reponse.utils.RestResponse;
+import com.example.shop.dtos.reponse.utils.ResultPaginationDTO;
 import com.example.shop.dtos.request.product.ProductCreateRequest;
 import com.example.shop.dtos.request.product.ProductUpdateRequest;
 import com.example.shop.exception.error.IDException;
@@ -15,6 +16,8 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -32,11 +35,12 @@ public class ProductController {
 
     ProductService productService;
     CategoryService categoryService;
-// abc
+
     @PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE}, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<RestResponse<ProductCreateReponse>> create(
             @RequestParam(value = "image") MultipartFile file,
-            @Valid @RequestPart ProductCreateRequest request) throws IOException, IDException {
+            @Valid @RequestPart ProductCreateRequest request)
+            throws IOException, IDException {
 
         if (!categoryService.exitByIdCategory(Long.valueOf(request.getCategoryId())))
             throw new IDException("Category already exit");
@@ -49,13 +53,34 @@ public class ProductController {
                         .build());
     }
 
+    @GetMapping
+    public ResponseEntity<RestResponse<ResultPaginationDTO>> findAll(
+            @RequestParam(value = "page", defaultValue = "1") String page,
+            @RequestParam(value = "size", defaultValue = "10") String size) {
+        try {
+            int currentPage = Integer.parseInt(page) - 1;
+            int pageSize = Integer.parseInt(size);
+            Pageable pageable = PageRequest.of(currentPage, pageSize);
+
+            return ResponseEntity.status(HttpStatus.OK)
+                    .body(RestResponse.<ResultPaginationDTO>builder()
+                            .statusCode(HttpStatus.OK.value())
+                            .message("Get Product With Panigation Successfully")
+                            .data(productService.fillAllCategory(pageable))
+                            .build());
+        } catch (NumberFormatException e) {
+            throw new NumberFormatException("Invalid number format for input: ");
+        }
+    }
+
     @PutMapping(value = "/{id}",
             consumes = {MediaType.MULTIPART_FORM_DATA_VALUE},
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<RestResponse<ProductUpdateReponse>> update(
             @PathVariable("id") int id,
             @RequestParam(value = "image", required = false) MultipartFile file,
-            @Valid @RequestPart(value = "request", required = false) ProductUpdateRequest request) throws IOException, IDException {
+            @Valid @RequestPart(value = "request", required = false) ProductUpdateRequest request)
+            throws IOException, IDException {
 
         if (!productService.exitByIdProduct(Long.valueOf(id)))
             throw new IDException("Product not found");

@@ -1,7 +1,10 @@
 package com.example.shop.services;
 
+import com.example.shop.dtos.reponse.category.CategoryCreateReponse;
 import com.example.shop.dtos.reponse.product.ProductCreateReponse;
 import com.example.shop.dtos.reponse.product.ProductUpdateReponse;
+import com.example.shop.dtos.reponse.utils.Pagination;
+import com.example.shop.dtos.reponse.utils.ResultPaginationDTO;
 import com.example.shop.dtos.request.product.ProductCreateRequest;
 import com.example.shop.dtos.request.product.ProductUpdateRequest;
 import com.example.shop.entities.Category;
@@ -16,6 +19,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.env.Environment;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -26,6 +31,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -68,9 +74,9 @@ public class ProductService {
              ProductUpdateRequest request) throws IOException {
 
         Product product = productRepository.findById(id).orElse(null);
-        updateProductFields(product,request);
+        updateProductFields(product, request);
 
-        if (!file.isEmpty()) {
+        if (file != null) {
             if ("default.png".equalsIgnoreCase(product.getImage()) || deleteImage(product.getImage())) {
                 product.setImage(saveImage(file));
             }
@@ -185,5 +191,33 @@ public class ProductService {
         Files.copy(imageFile.getInputStream(), path, StandardCopyOption.REPLACE_EXISTING);
 
         return fileName;
+    }
+
+    public ResultPaginationDTO fillAllCategory(Pageable pageable) {
+        Page<Product> productsPage = productRepository.findAll(pageable);
+
+        ResultPaginationDTO resultPaginationDTO = new ResultPaginationDTO();
+        resultPaginationDTO.setResult(productsPage.getContent().stream()
+                .map(product -> ProductCreateReponse.builder()
+                        .id(product.getId())
+                        .name(product.getName())
+                        .price(product.getPrice())
+                        .quantity(product.getQuantity())
+                        .imageUrl(environment.getProperty("image_url") + product.getImage())
+                        .description(product.getDescription())
+                        .acctive(product.isActive())
+                        .category(product.getCategory())
+                        .created(product.getCreatedAt())
+                        .build())
+                .collect(Collectors.toList()));
+
+        resultPaginationDTO.setPagination(Pagination.builder()
+                .totalPages(productsPage.getTotalPages())
+                .currentPage(pageable.getPageNumber() + 1)
+                .pageSize(pageable.getPageSize())
+                .totalData(productsPage.getTotalElements())
+                .build());
+
+        return resultPaginationDTO;
     }
 }

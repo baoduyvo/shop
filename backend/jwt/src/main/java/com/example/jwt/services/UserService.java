@@ -18,6 +18,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -92,14 +93,13 @@ public class UserService {
     }
 
     public UserResponse create(UserCreateRequest request) {
-        Role role = roleRepository.fetchRoleByName(request.getRole());
         User user = new User();
         user.setEmail(request.getEmail());
         user.setPassword(passwordEncoder.encode(request.getPassword()));
         user.setAge(request.getAge());
         user.setGender(request.getGender());
         user.setAddress(request.getAddress());
-        user.setRole(role);
+        user.setRole(roleRepository.findById(Long.valueOf(request.getRole())).orElse(null));
         userRepository.save(user);
 
         return UserResponse.builder()

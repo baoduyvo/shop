@@ -84,7 +84,7 @@ public class UserController {
                 .build());
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<RestResponse<UserResponse>> updateUserByID(@PathVariable("id") String id,
                                                                      @RequestBody UserUpdateRequest request) throws IDException {
         if (userService.existsByID(id))
