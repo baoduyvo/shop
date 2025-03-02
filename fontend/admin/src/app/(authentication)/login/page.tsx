@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import React from 'react'
-import Loginform from '../register/form'
+import Loginform from './form'
 
 export const metadata: Metadata = {
     title: 'Login Page',
@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 }
 
 export default function LoginPage() {
+
     return (
         <>
             <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">

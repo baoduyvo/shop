@@ -1,5 +1,12 @@
 import { Package } from '@/app/types/package';
+import { Metadata } from 'next';
 import React from 'react'
+
+
+export const metadata: Metadata = {
+    title: "Categories Admin Page",
+    description: "Categories Admin Page",
+};
 
 const packageData: Package[] = [
     {

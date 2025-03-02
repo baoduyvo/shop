@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
+import AppProvider from "./app-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,13 +27,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const notify = () => toast("Wow so easy!");
-
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <AppProvider>
         <div className="dark:bg-boxdark-2 dark:text-bodydark">
           <div className="flex h-screen overflow-hidden">
             <Sidebar />
@@ -42,10 +42,14 @@ export default function RootLayout({
                 <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
                   {children}
                 </div>
+                <div>
+                  <ToastContainer />
+                </div>
               </main>
             </div>
           </div>
         </div>
+        </AppProvider>
       </body>
     </html>
   );

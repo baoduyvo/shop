@@ -1,6 +1,7 @@
 package com.example.jwt.controllers;
 
 import com.example.jwt.dtos.request.auth.LoginRequest;
+import com.example.jwt.dtos.request.auth.RegisterRequest;
 import com.example.jwt.dtos.request.user.UserCreateRequest;
 import com.example.jwt.dtos.response.AuthenticationResponse;
 import com.example.jwt.dtos.response.user.TokenData;
@@ -118,7 +119,7 @@ public class AuthenticationController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<RestResponse<UserResponse>> createUser(@Valid @RequestBody UserCreateRequest request) throws EmailException {
+    public ResponseEntity<RestResponse<UserResponse>> createUser(@Valid @RequestBody RegisterRequest request) throws EmailException {
         if (userService.existsByEmail(request.getEmail()))
             throw new EmailException("Email already exists");
 

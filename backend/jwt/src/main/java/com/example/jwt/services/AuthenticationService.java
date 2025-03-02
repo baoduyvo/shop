@@ -1,6 +1,7 @@
 package com.example.jwt.services;
 
 import com.example.jwt.dtos.request.auth.LoginRequest;
+import com.example.jwt.dtos.request.auth.RegisterRequest;
 import com.example.jwt.dtos.request.user.UserCreateRequest;
 import com.example.jwt.dtos.response.AuthenticationResponse;
 import com.example.jwt.dtos.response.user.UserInsideTokenResponse;
@@ -131,13 +132,10 @@ public class AuthenticationService {
         return userToken;
     }
 
-    public UserResponse register(UserCreateRequest request) {
+    public UserResponse register(RegisterRequest request) {
         User user = new User();
         user.setEmail(request.getEmail());
         user.setPassword(passwordEncoder.encode(request.getPassword()));
-        user.setAge(request.getAge());
-        user.setGender(request.getGender());
-        user.setAddress(request.getAddress());
         user.setRole(roleRepository.fetchRoleByName(PredefinedRole.USER_ROLE));
 
         userRepository.save(user);

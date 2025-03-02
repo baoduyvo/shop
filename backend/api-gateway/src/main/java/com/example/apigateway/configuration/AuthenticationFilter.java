@@ -34,7 +34,7 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
     ObjectMapper objectMapper;
     @NonFinal
     private String[] publicEndpoints = {
-            "/jwt/auth/.*"
+            "/jwt/auth/.*","/jwt/test"
     };
 
     @Value("${server.servlet.context-path}")

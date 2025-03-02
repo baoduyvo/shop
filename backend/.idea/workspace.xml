@@ -5,236 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="887c4173-68ab-48a7-963f-c0a85041baeb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/controllers/ProfileController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/controllers/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-cache/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-cache/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-cache/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-cache/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-cache/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-cache/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-cache/src/main/java/com/example/rediscache/RedisCacheApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-cache/src/main/java/com/example/rediscache/configurations/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-cache/src/main/java/com/example/rediscache/entities/Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-cache/src/main/java/com/example/rediscache/entities/CartDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-cache/src/main/java/com/example/rediscache/services/CartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-cache/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis-cache/src/test/java/com/example/rediscache/RedisCacheApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/controllers/CartDetailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/cart_detail/CartDetailCreateReponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/client/ClientReponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/client/UserInsideTokenResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/client/UserResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/request/cart/CartDetailRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/request/client/TokenData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/repositories/CartDetailRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/repositories/ClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/CartDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/ClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/utils/constants/GenderEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/dtos/request/auth/RegisterRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/configuration/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/configuration/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/configuration/WebClientConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/configuration/WebClientConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/configuration/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/configuration/CorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/configuration/DatabaseInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/configuration/DatabaseInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/configuration/PermissionInterceptorConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/configuration/PermissionInterceptorConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/configuration/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/configuration/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/controllers/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/controllers/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/controllers/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/controllers/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/dtos/request/auth/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/dtos/request/auth/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/dtos/request/user/UserCreateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/dtos/request/user/UserCreateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/services/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/services/AuthenticationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/configuration/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/configuration/CorsConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/configuration/DatabaseInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/configuration/DatabaseInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/configuration/PermissionInterceptorConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/configuration/PermissionInterceptorConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/configuration/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/configuration/SecurityConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/services/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/ShopApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/ShopApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/controllers/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/controllers/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/Cart.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/CartDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/CartDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/repositories/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/repositories/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/main/resources/static/images/3ec7647a1a7547f583b8fcd79b124bf6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/main/resources/static/images/af1004e071694696a0e26f75b77b0a21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/.prettierrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/controllers/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/controllers/AuthenticationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/controllers/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/controllers/TestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/dtos/request/auth/LoginRequest$LoginRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/dtos/request/auth/LoginRequest$LoginRequestBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/dtos/request/auth/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/dtos/request/auth/LoginRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/services/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/services/AuthenticationService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fontend/admin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fontend/admin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/postcss.config.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/process.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/public/data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/common/Loader/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Breadcrumbs/Breadcrumb.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/CardDataStats.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Charts/ChartOne.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Charts/ChartThree.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Charts/ChartTwo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Chat/ChatCard.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Checkboxes/CheckboxFive.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Checkboxes/CheckboxFour.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Checkboxes/CheckboxOne.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Checkboxes/CheckboxThree.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Checkboxes/CheckboxTwo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/ClickOutside.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Dropdowns/DropdownDefault.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Forms/DatePicker/DatePickerOne.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Forms/DatePicker/DatePickerTwo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Forms/MultiSelect.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Forms/SelectGroup/SelectGroupOne.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Forms/SelectGroup/SelectGroupTwo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Header/DarkModeSwitcher.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Header/DropdownMessage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Header/DropdownNotification.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Header/DropdownUser.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Header/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Maps/MapOne.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/ModalSettings.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/PageTitle.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/app/(authentication)/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/src/app/(authentication)/login/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/app/(authentication)/register/form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/src/app/(authentication)/register/form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/app/(authentication)/register/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/src/app/(authentication)/register/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/app/(dashboard)/users/create/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/src/app/(dashboard)/users/create/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/app/(dashboard)/users/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/src/app/(dashboard)/users/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/src/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Sidebar/SidebarLinkGroup.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Sidebar/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Switchers/SwitcherFour.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Switchers/SwitcherOne.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Switchers/SwitcherThree.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Switchers/SwitcherTwo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/TableSettings.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Tables/TableOne.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Tables/TableThree.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Tables/TableTwo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/css/satoshi.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Black.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Black.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Black.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Black.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-BlackItalic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-BlackItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-BlackItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-BlackItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Bold.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-BoldItalic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-BoldItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-BoldItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Italic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Italic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Light.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Light.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Light.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-LightItalic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-LightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-LightItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-LightItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Medium.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Medium.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Medium.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-MediumItalic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-MediumItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-MediumItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-MediumItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Variable.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Variable.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Variable.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-Variable.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-VariableItalic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-VariableItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-VariableItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/fonts/Satoshi-VariableItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/hooks/ResponseProvider.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/hooks/fireToast.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/hooks/useColorMode.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/hooks/useLocalStorage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/brand/brand-01.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/brand/brand-02.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/brand/brand-03.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/brand/brand-04.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/brand/brand-05.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/cards/cards-01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/cards/cards-02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/cards/cards-03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/cards/cards-04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/cards/cards-05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/cards/cards-06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/country/country-01.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/country/country-02.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/country/country-03.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/country/country-04.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/country/country-05.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/country/country-06.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/cover/cover-01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/icon/icon-arrow-down.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/icon/icon-calendar.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/icon/icon-copy-alt.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/icon/icon-moon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/icon/icon-sun.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/logo/logo-dark.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/logo/logo-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/logo/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/product/product-01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/product/product-02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/product/product-03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/product/product-04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/product/product-thumb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/task/task-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/user/user-01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/user/user-02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/user/user-03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/user/user-04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/user/user-05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/user/user-06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/user/user-07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/user/user-08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/user/user-09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/user/user-10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/user/user-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/user/user-12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/images/user/user-13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/js/us-aea-en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/jsvectormap.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/layout/DefaultLayout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/lib.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/main.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/pages/Admin/Categories/Create.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/pages/Admin/Categories/Detail.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/pages/Admin/Categories/List.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/pages/Admin/Dashboard/ECommerce.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/pages/Admin/Settings.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/pages/Admin/Users/Create.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/pages/Admin/Users/Detail.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/pages/Admin/Users/List.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/pages/Authentication/Register.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/pages/Authentication/SignIn.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/react-app-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/types/brand.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/types/chat.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/types/package.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/types/product.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/tailwind.config.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/tsconfig.node.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/vite.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/supergearyt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Sidebar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/src/components/Sidebar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/src/middleware.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,11 +102,11 @@
       <recent name="D:\java\project\backend\shop\src\main\java\com\example\shop\dtos\reponse" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.jwt.dtos.request.auth" />
       <recent name="com.example.jwt.controllers" />
       <recent name="com.example.shop.dtos.reponse.client" />
       <recent name="com.example.shop.dtos.request.client" />
       <recent name="com.example.rediscache.services" />
-      <recent name="com.example.rediscache.entities" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -446,6 +244,11 @@
       <workItem from="1740052908668" duration="6315000" />
       <workItem from="1740500492834" duration="4257000" />
       <workItem from="1740540391861" duration="2546000" />
+      <workItem from="1740709046941" duration="95000" />
+      <workItem from="1740709557694" duration="7077000" />
+      <workItem from="1740813753334" duration="1412000" />
+      <workItem from="1740839665118" duration="1374000" />
+      <workItem from="1740881079154" duration="669000" />
     </task>
     <servers />
   </component>
