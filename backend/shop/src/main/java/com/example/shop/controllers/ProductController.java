@@ -66,7 +66,7 @@ public class ProductController {
                     .body(RestResponse.<ResultPaginationDTO>builder()
                             .statusCode(HttpStatus.OK.value())
                             .message("Get Product With Panigation Successfully")
-                            .data(productService.fillAllCategory(pageable))
+                            .data(productService.fillAll(pageable))
                             .build());
         } catch (NumberFormatException e) {
             throw new NumberFormatException("Invalid number format for input: ");

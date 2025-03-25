@@ -5,34 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="887c4173-68ab-48a7-963f-c0a85041baeb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/dtos/request/auth/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/src/main/java/com/example/notification/NotificationApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis-service/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis-service/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/configuration/DateConversionConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/configuration/RedisConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/configuration/TokenUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/repo/ProductRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/BaseRedisService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/main/resources/static/images/9c3bfb01e5d045ce8a22b06d2025ccf7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/configuration/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/configuration/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/configuration/WebClientConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/configuration/WebClientConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/configuration/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/configuration/CorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/controllers/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/controllers/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/controllers/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/controllers/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/dtos/request/auth/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/dtos/request/auth/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/dtos/request/user/UserCreateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/dtos/request/user/UserCreateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/services/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/src/main/java/com/example/jwt/services/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/configuration/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/configuration/CorsConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/controllers/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/controllers/AuthenticationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/controllers/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/controllers/TestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/dtos/request/auth/LoginRequest$LoginRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/dtos/request/auth/LoginRequest$LoginRequestBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/dtos/request/auth/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/dtos/request/auth/LoginRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/services/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/jwt/target/classes/com/example/jwt/services/AuthenticationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/app/(authentication)/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/src/app/(authentication)/login/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/app/(authentication)/register/form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/src/app/(authentication)/register/form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/app/(authentication)/register/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/src/app/(authentication)/register/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/app/(dashboard)/users/create/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/src/app/(dashboard)/users/create/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/app/(dashboard)/users/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/src/app/(dashboard)/users/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Sidebar/SidebarLinkGroup.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/components/Sidebar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/src/components/Sidebar/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fontend/admin/src/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend/admin/src/middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis-cache/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/notification/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis-cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/notification/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis-cache/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis-cache/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/notification/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis-cache/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/notification/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis-cache/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis-cache/src/main/java/com/example/rediscache/RedisCacheApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis-cache/src/main/java/com/example/rediscache/configurations/RedisConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis-cache/src/main/java/com/example/rediscache/entities/Cart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis-cache/src/main/java/com/example/rediscache/entities/CartDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis-cache/src/main/java/com/example/rediscache/services/CartService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis-cache/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis-cache/src/test/java/com/example/rediscache/RedisCacheApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/test/java/com/example/notification/NotificationApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/controllers/CartDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/controllers/CartDetailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/cart_detail/CartDetailCreateReponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/cart_detail/CartDetailCreateReponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/utils/ResultPaginationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/utils/ResultPaginationDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/request/cart/CartDetailRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/request/cart/CartDetailRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/request/client/TokenData.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/request/client/TokenData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/CartDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/CartDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/repositories/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/repositories/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/CartDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/CartDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/resources/static/images/2fa2c1d0d20b491b92a79e20b4bdf484.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/resources/static/images/55a67bd895b747a3865b80d74f34c5d2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/resources/static/images/f1484f11ad0c43c4a90c7923cb784311.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +70,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -64,6 +87,9 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Docker.shop/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.shop [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.shop [package].executor&quot;: &quot;Run&quot;,
     &quot;Notification.DisplayName-DoNotAsk-Database detector&quot;: &quot;Database detector&quot;,
     &quot;Notification.DoNotAsk-Database detector&quot;: &quot;true&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
@@ -78,7 +104,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/java/theme/Web&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/java/project/backend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -102,11 +128,11 @@
       <recent name="D:\java\project\backend\shop\src\main\java\com\example\shop\dtos\reponse" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.shop.repositories" />
+      <recent name="com.example.shop.entities" />
       <recent name="com.example.jwt.dtos.request.auth" />
       <recent name="com.example.jwt.controllers" />
       <recent name="com.example.shop.dtos.reponse.client" />
-      <recent name="com.example.shop.dtos.request.client" />
-      <recent name="com.example.rediscache.services" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -121,7 +147,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.JwtApplication">
+  <component name="RunManager" selected="Spring Boot.ShopApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="api-gateway" />
@@ -144,9 +170,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RedisCacheApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="redis-cache" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.rediscache.RedisCacheApplication" />
+    <configuration name="NotificationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="notification" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.notification.NotificationApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,6 +185,12 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
@@ -249,6 +282,28 @@
       <workItem from="1740813753334" duration="1412000" />
       <workItem from="1740839665118" duration="1374000" />
       <workItem from="1740881079154" duration="669000" />
+      <workItem from="1741054950509" duration="28000" />
+      <workItem from="1741057428272" duration="12667000" />
+      <workItem from="1741089705757" duration="799000" />
+      <workItem from="1741227804360" duration="4305000" />
+      <workItem from="1741232243996" duration="8926000" />
+      <workItem from="1741266774446" duration="4405000" />
+      <workItem from="1741323155037" duration="4262000" />
+      <workItem from="1741584658906" duration="998000" />
+      <workItem from="1741587292345" duration="65000" />
+      <workItem from="1742357417248" duration="4584000" />
+      <workItem from="1742398056971" duration="6428000" />
+      <workItem from="1742444443572" duration="5032000" />
+      <workItem from="1742472671956" duration="7238000" />
+      <workItem from="1742480503391" duration="1235000" />
+      <workItem from="1742528564823" duration="11062000" />
+      <workItem from="1742622437265" duration="8117000" />
+      <workItem from="1742645118244" duration="4761000" />
+      <workItem from="1742697711867" duration="10274000" />
+      <workItem from="1742798726337" duration="138000" />
+      <workItem from="1742798888350" duration="1284000" />
+      <workItem from="1742872294711" duration="142000" />
+      <workItem from="1742872970140" duration="2476000" />
     </task>
     <servers />
   </component>

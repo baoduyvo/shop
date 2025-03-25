@@ -6,6 +6,7 @@ import com.example.shop.entities.Product;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.time.Instant;
 import java.util.Date;
 
 @Data
@@ -18,7 +19,6 @@ public class CartDetailCreateReponse {
     Long id;
     Integer total;
     Integer quantity;
-    Date created;
-    ClientReponse client;
+    Instant created;
     Product product;
 }

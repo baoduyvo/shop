@@ -1,0 +1,62 @@
+ public CartDetailCreateReponse getCartById (String token,int id){
+//            TokenData tokenRequest = new TokenData();
+//            tokenRequest.setToken(token.substring(7));
+//            RestResponse<UserInsideTokenResponse> user = clientRepository.getClientIntrospect(token, tokenRequest);
+//
+//            UserInsideTokenResponse userResponse = user.getData();
+//            System.out.println("userResponse - " + userResponse);
+//            redisTemplate.opsForValue().set(CART_KEY + userResponse.getId(), userResponse);
+//
+////        Product product = productRepository.findById(Long.valueOf(request.getProductId())).orElse(null);
+////        product.setImage(environment.getProperty("image_url") + product.getImage());
+////
+////        ClientReponse clientReponse = ClientReponse.builder()
+////                .id(user.getData().getId())
+////                .email(user.getData().getEmail())
+////                .age(user.getData().getAge())
+////                .gender(user.getData().getGender())
+////                .address(user.getData().getAddress())
+////                .createdAt(user.getData().getCreatedAt())
+////                .build();
+////
+////        CartDetail cartDetail = new CartDetail();
+////        cartDetail.setQuantity(request.getQuantity());
+////        cartDetail.setTotal(request.getQuantity() * product.getPrice().intValue());
+////        cartDetail.setUser_id(request.getClientId());
+////        cartDetail.setProduct(product);
+////
+//
+////        return CartDetailCreateReponse.builder()
+////                .id(cartDetail.getId())
+////                .total(cartDetail.getTotal())
+////                .quantity(request.getQuantity())
+////                .created(cartDetail.getCreated_at())
+////                .client(clientReponse)
+////                .product(product)
+////                .build();
+//
+//            return null;
+//
+        }
+else {
+            log.info("Cập nhật CartDetail trong mảng giỏ hàng của user: {}", userIdKey);
+            if (existingCartDetail instanceof CartDetail) {
+                CartDetail existingDetail = (CartDetail) existingCartDetail;
+                existingDetail.setQuantity(existingDetail.getQuantity() + request.getQuantity());
+                existingDetail.setTotal(existingDetail.getQuantity() * product.getPrice().intValue());
+                baseRedisService.saveDataWithKey(cartDetailKey, existingDetail);  // Update CartDetail in Redis
+            }
+        }
+
+
+long timestamp = 1742537649;
+
+        // Convert to Instant (representing the timestamp)
+        Instant instant = Instant.ofEpochSecond(timestamp);
+
+        // Format as a readable date
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+                .withZone(ZoneId.systemDefault()); // Use your desired time zone
+
+        // Print the formatted date
+        System.out.println(formatter.format(instant));

@@ -19,7 +19,11 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+
+    @Column(name = "created_at", columnDefinition = "DATETIME")
     private Instant createdAt;
+
+    @Column(name = "updated_at", columnDefinition = "DATETIME")
     private Instant updatedAt;
 
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)

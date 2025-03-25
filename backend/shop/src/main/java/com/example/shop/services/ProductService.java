@@ -1,6 +1,5 @@
 package com.example.shop.services;
 
-import com.example.shop.dtos.reponse.category.CategoryCreateReponse;
 import com.example.shop.dtos.reponse.product.ProductCreateReponse;
 import com.example.shop.dtos.reponse.product.ProductUpdateReponse;
 import com.example.shop.dtos.reponse.utils.Pagination;
@@ -13,7 +12,6 @@ import com.example.shop.exception.error.IDException;
 import com.example.shop.repositories.CategoryRepository;
 import com.example.shop.repositories.ProductRepository;
 import com.example.shop.utils.FileHelper;
-import jakarta.transaction.Transactional;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -83,7 +81,6 @@ public class ProductService {
         }
 
         product = productRepository.save(product);
-
         return ProductUpdateReponse.builder()
                 .id(product.getId())
                 .name(product.getName())
@@ -193,7 +190,7 @@ public class ProductService {
         return fileName;
     }
 
-    public ResultPaginationDTO fillAllCategory(Pageable pageable) {
+    public ResultPaginationDTO fillAll(Pageable pageable) {
         Page<Product> productsPage = productRepository.findAll(pageable);
 
         ResultPaginationDTO resultPaginationDTO = new ResultPaginationDTO();

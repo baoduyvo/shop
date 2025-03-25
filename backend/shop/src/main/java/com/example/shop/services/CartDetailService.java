@@ -1,24 +1,35 @@
 package com.example.shop.services;
 
 import com.example.shop.dtos.reponse.cart_detail.CartDetailCreateReponse;
-import com.example.shop.dtos.reponse.client.ClientReponse;
 import com.example.shop.dtos.reponse.client.UserInsideTokenResponse;
-import com.example.shop.dtos.reponse.client.UserResponse;
 import com.example.shop.dtos.reponse.product.ProductCreateReponse;
-import com.example.shop.dtos.reponse.utils.RestResponse;
+import com.example.shop.dtos.reponse.utils.Pagination;
+import com.example.shop.dtos.reponse.utils.ResultPaginationDTO;
 import com.example.shop.dtos.request.cart.CartDetailRequest;
-import com.example.shop.dtos.request.client.TokenData;
 import com.example.shop.entities.CartDetail;
 import com.example.shop.entities.Product;
+import com.example.shop.exception.error.IDException;
 import com.example.shop.repositories.CartDetailRepository;
-import com.example.shop.repositories.ClientRepository;
 import com.example.shop.repositories.ProductRepository;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.core.env.Environment;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -26,80 +37,89 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class CartDetailService {
 
-    ClientRepository clientRepository;
     ProductRepository productRepository;
     CartDetailRepository cartDetailRepository;
-    Environment environment;
 
-    public CartDetailCreateReponse create(String token, CartDetailRequest request) {
-        RestResponse<UserResponse> user = clientRepository.getClientCurrent(token, request.getClientId());
-        Product product = productRepository.findById(Long.valueOf(request.getProductId())).orElse(null);
-        product.setImage(environment.getProperty("image_url") + product.getImage());
+    BaseRedisService baseRedisService;
+    ClientService clientService;
 
-        ClientReponse clientReponse = ClientReponse.builder()
-                .id(user.getData().getId())
-                .email(user.getData().getEmail())
-                .age(user.getData().getAge())
-                .gender(user.getData().getGender())
-                .address(user.getData().getAddress())
-                .createdAt(user.getData().getCreatedAt())
+    private static final String USERID_KEY = "USERID_";
+    private static final String CART_KEY = "CART_DETAIL_KEY_";
+
+    public CartDetailCreateReponse create(String token, CartDetailRequest request) throws IDException {
+        Product product = productRepository.findById(Long.valueOf(request.getProductId()))
+                .orElseThrow(() -> new IDException("ID Product Not Found"));
+
+        UserInsideTokenResponse getUserInside = clientService.getClientIntrospect(token);
+
+        CartDetail cartDetail = CartDetail.builder()
+                .quantity(request.getQuantity())
+                .total(request.getQuantity() * product.getPrice().intValue())
+                .user_id(getUserInside.getId())
+                .product(product)
                 .build();
 
-        CartDetail cartDetail = new CartDetail();
-        cartDetail.setQuantity(request.getQuantity());
-        cartDetail.setTotal(request.getQuantity() * product.getPrice().intValue());
-        cartDetail.setUser_id(request.getClientId());
-        cartDetail.setProduct(product);
-
         cartDetailRepository.save(cartDetail);
+
+        String userIdKey = USERID_KEY + getUserInside.getId();
+        String cartDetailKey = CART_KEY + cartDetail.getId();
+
+        if (!baseRedisService.hasKey(userIdKey) || baseRedisService.getDataWithKey(cartDetailKey, CartDetail.class) == null) {
+            Map<String, Object> listCartDetail = new HashMap<>();
+            log.info("Thêm CartDetail vào mảng giỏ hàng của user: {}", userIdKey);
+            listCartDetail.put(cartDetailKey, cartDetail);
+            baseRedisService.addToList(userIdKey, listCartDetail);
+        }
 
         return CartDetailCreateReponse.builder()
                 .id(cartDetail.getId())
                 .total(cartDetail.getTotal())
                 .quantity(request.getQuantity())
                 .created(cartDetail.getCreated_at())
-                .client(clientReponse)
                 .product(product)
                 .build();
 
     }
 
+    public ResultPaginationDTO fillAll(String token, Pageable pageable) {
+        UserInsideTokenResponse getUserInside = clientService.getClientIntrospect(token);
+        List<Object> results = baseRedisService.getListElements(USERID_KEY + getUserInside.getId());
 
-    public CartDetailCreateReponse getCartById(String token, int id) {
-        TokenData tokenRequest = new TokenData();
-        tokenRequest.setToken(token.trim());
-        RestResponse<UserInsideTokenResponse> user = clientRepository.getClientCurrent(token,tokenRequest);
+        ObjectMapper objectMapper = new ObjectMapper()
+                .registerModule(new JavaTimeModule())
+                .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
-        System.out.println(">>>>>>>>>>>>>>>>>>> " + user);
-//        Product product = productRepository.findById(Long.valueOf(request.getProductId())).orElse(null);
-//        product.setImage(environment.getProperty("image_url") + product.getImage());
-//
-//        ClientReponse clientReponse = ClientReponse.builder()
-//                .id(user.getData().getId())
-//                .email(user.getData().getEmail())
-//                .age(user.getData().getAge())
-//                .gender(user.getData().getGender())
-//                .address(user.getData().getAddress())
-//                .createdAt(user.getData().getCreatedAt())
-//                .build();
-//
-//        CartDetail cartDetail = new CartDetail();
-//        cartDetail.setQuantity(request.getQuantity());
-//        cartDetail.setTotal(request.getQuantity() * product.getPrice().intValue());
-//        cartDetail.setUser_id(request.getClientId());
-//        cartDetail.setProduct(product);
-//
+        int start = (int) pageable.getOffset();
+        int end = Math.min((start + pageable.getPageSize()), results.size());
+        List<Object> pageContent = results.subList(start, end);
 
-//        return CartDetailCreateReponse.builder()
-//                .id(cartDetail.getId())
-//                .total(cartDetail.getTotal())
-//                .quantity(request.getQuantity())
-//                .created(cartDetail.getCreated_at())
-//                .client(clientReponse)
-//                .product(product)
-//                .build();
+        Page<List<Object>> cartDetailsPage = new PageImpl<>(List.of(pageContent),
+                pageable, results.size());
 
-        return null;
+        List<Map<String, CartDetail>> resultList = cartDetailsPage.getContent().stream()
+                .map(cart -> deserializeCartDetails(cart.toString(), objectMapper))
+                .flatMap(List::stream)
+                .collect(Collectors.toList());
 
+        return new ResultPaginationDTO(
+                Pagination.builder()
+                        .totalPages(cartDetailsPage.getTotalPages())
+                        .currentPage(pageable.getPageNumber() + 1)
+                        .pageSize(pageable.getPageSize())
+                        .totalData(cartDetailsPage.getTotalElements())
+                        .build(),
+                resultList
+        );
+    }
+
+    private List<Map<String, CartDetail>> deserializeCartDetails(String cartJson, ObjectMapper objectMapper) {
+        try {
+            return objectMapper.readValue(cartJson,
+                    objectMapper.getTypeFactory().constructCollectionType(List.class,
+                            objectMapper.getTypeFactory().constructMapType(Map.class, String.class, CartDetail.class)));
+        } catch (Exception e) {
+            log.error("Error deserializing cart details", e);
+            return Collections.emptyList();
+        }
     }
 }

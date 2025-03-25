@@ -1,9 +1,12 @@
 package com.example.shop.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
 
+import java.io.Serializable;
 import java.time.Instant;
 import java.util.List;
 
@@ -14,7 +17,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Product {
+public class Product  implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -24,11 +27,16 @@ public class Product {
     private String image;
     private String description;
     private boolean active;
+
+    @Column(name = "created_at", columnDefinition = "DATETIME")
     private Instant createdAt;
+
+    @Column(name = "updated_at", columnDefinition = "DATETIME")
     private Instant updatedAt;
 
     @ManyToOne
     @JoinColumn(name = "category_id")
+    @JsonIgnore
     private Category category;
 
     @OneToMany(mappedBy = "product",fetch = FetchType.LAZY)

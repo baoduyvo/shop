@@ -1,11 +1,11 @@
 package com.example.shop.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
 
+import java.io.Serializable;
 import java.time.Instant;
 import java.util.Date;
 
@@ -15,29 +15,33 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CartDetail {
+@Builder
+public class CartDetail implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Integer quantity;
-    private Integer total;
-    private String user_id;
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Long id;
+        private Integer quantity;
+        private Integer total;
+        private String user_id;
 
-    private Date created_at;
-    private Date updated_at;
+        @Column(name = "created_at", columnDefinition = "DATETIME")
+        private Instant created_at;
 
-    @ManyToOne
-    @JoinColumn(name = "product_id")
-    private Product product;
+        @Column(name = "updated_at", columnDefinition = "DATETIME")
+        private Instant updated_at;
+
+        @ManyToOne
+        @JoinColumn(name = "product_id")
+        private Product product;
 
     @PrePersist
     public void handleBeforeCreate() {
-        this.created_at = new Date();
+        this.created_at = Instant.now();
     }
 
     @PreUpdate
     public void handleBeforeUpdate() {
-        this.updated_at = new Date();
+        this.updated_at = Instant.now();
     }
 }
