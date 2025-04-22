@@ -5,46 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="887c4173-68ab-48a7-963f-c0a85041baeb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/notification/src/main/java/com/example/notification/configuration/KafkaConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification/src/main/java/com/example/notification/dtos/mail/KafkaMessageDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification/src/main/java/com/example/notification/infrastructure/common/CartDetailEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification/src/main/java/com/example/notification/infrastructure/order/CreateCartComsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification/src/main/java/com/example/notification/services/MailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/configuration/KafkaConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/controllers/PaymentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/cart_detail/CartDetailFindAllReponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/mail/KafkaMessageDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/ProductElasticsearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/infrastructure/common/contants/EventType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/infrastructure/common/dto/KafkaMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/infrastructure/common/dto/MessageBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/infrastructure/common/dto/MessageMeta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/infrastructure/common/event/CartDetailEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/infrastructure/common/util/MessageBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/infrastructure/order/CreateCartComsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/infrastructure/order/CreateCartProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/infrastructure/user/UserActiveProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/repositories/ProductElasticsearchRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/MailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/PaymentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redis-service/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redis-service/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/controllers/CartDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/controllers/CartDetailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/client/ClientReponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/client/ClientReponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/entities/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/repositories/CartDetailRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/repositories/CartDetailRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/BaseRedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/BaseRedisService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/CartDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/CartDetailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../io.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../io.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/configuration/KafkaConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/configuration/KafkaConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/mail/KafkaMessageDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/dtos/reponse/mail/KafkaMessageDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/infrastructure/order/CreateCartComsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/main/java/com/example/shop/infrastructure/order/CreateCartComsumer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -323,6 +287,7 @@
       <workItem from="1745044149493" duration="3806000" />
       <workItem from="1745290089964" duration="4535000" />
       <workItem from="1745300277518" duration="1469000" />
+      <workItem from="1745302025273" duration="2374000" />
     </task>
     <servers />
   </component>

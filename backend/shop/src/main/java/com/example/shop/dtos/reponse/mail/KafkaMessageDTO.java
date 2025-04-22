@@ -37,4 +37,14 @@ public class KafkaMessageDTO {
     public void setBody(String body) {
         this.body = body;
     }
+
+    public KafkaMessageDTO() {
+    }
+
+    public KafkaMessageDTO(String from, String to, String subject, String body) {
+        this.from = from;
+        this.to = to;
+        this.subject = subject;
+        this.body = body;
+    }
 }
