@@ -52,4 +52,21 @@ public class Product  implements Serializable {
     public void handleBeforeUpdate() {
         this.updatedAt = Instant.now();
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", image='" + image + '\'' +
+                ", description='" + description + '\'' +
+                ", active=" + active +
+                ", createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
+                ", category=" + category +
+                ", cartDetailList=" + cartDetailList +
+                '}';
+    }
 }

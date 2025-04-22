@@ -1,7 +1,6 @@
 package com.example.shop.dtos.reponse.client;
 
 import com.example.shop.utils.constants.GenderEnum;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 

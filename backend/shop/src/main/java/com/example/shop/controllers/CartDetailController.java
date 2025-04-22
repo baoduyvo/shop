@@ -19,6 +19,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @RestController
 @RequestMapping("carts")
@@ -32,19 +34,18 @@ public class CartDetailController {
     Environment environment;
 
     @PostMapping
-    public ResponseEntity<RestResponse<CartDetailCreateReponse>> create(
+    public ResponseEntity<RestResponse<Void>> create(
             HttpServletRequest httpServletRequest,
-            @RequestBody CartDetailRequest request) {
+            @RequestBody List<CartDetailRequest> request) {
         String token = TokenUtils.extractToken(httpServletRequest);
 
-        CartDetailCreateReponse cart = cartDetailService.create(token, request);
-        cart.getProduct().setImage(environment.getProperty("image_url") + cart.getProduct().getImage());
+        cartDetailService.create(token, request);
 
         return ResponseEntity.status(HttpStatus.OK)
-                .body(RestResponse.<CartDetailCreateReponse>builder()
+                .body(RestResponse.<Void>builder()
                         .statusCode(HttpStatus.OK.value())
                         .message("Created Cart Detail Successfully")
-                        .data(cart)
+                        .data(null)
                         .build());
     }
 

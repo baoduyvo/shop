@@ -132,4 +132,10 @@ public class ProductController {
                         .data(productService.getByNameProduct(name))
                         .build());
     }
+
+//    @GetMapping("/sync-products")
+//    public String syncProducts() {
+//        productService.syncProductsToElasticsearch();
+//        return "Products synchronized to Elasticsearch!";
+//    }
 }

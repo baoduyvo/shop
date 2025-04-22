@@ -81,8 +81,28 @@ public class CartController {
         return cartService.calculateCartTotal(cartId);
     }
 }
+  Map<String, Object> results = baseRedisService.getAllFromHash(CART + getUserInside.getId());
 
+        List<Product> products = new ArrayList<>();
 
+   
+
+        Page<CartDetail> cartDetailsPage = cartDetailRepository.findAll(pageable);
+     results.forEach((k, v) -> {
+            if (k.startsWith("PRODUCT:")) {
+                String productId = k.substring("PRODUCT:".length());
+
+                Product product = productRepository.findById(Long.valueOf(productId))
+                        .orElseThrow(() -> new IDException("Product ID Not Found"));
+
+                if (product != null) {
+
+                    System.out.println("product - " + product.toString());
+
+                    products.add(product);
+                }
+            }
+        });
 $sql = 'INSERT INTO cart_detail
     (product_name,price,quantity,image,status,product_id,user_id,created_at)
     VALUES

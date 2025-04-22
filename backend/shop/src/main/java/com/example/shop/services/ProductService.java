@@ -12,6 +12,7 @@ import com.example.shop.exception.error.IDException;
 import com.example.shop.repositories.CategoryRepository;
 import com.example.shop.repositories.ProductRepository;
 import com.example.shop.utils.FileHelper;
+import jakarta.transaction.Transactional;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -28,8 +29,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Service
 @RequiredArgsConstructor
@@ -217,4 +221,29 @@ public class ProductService {
 
         return resultPaginationDTO;
     }
+
+
+//    @Transactional
+//    public void syncProductsToElasticsearch() {
+//        Iterable<Product> productsIterable = productRepository.findAll();
+//
+//        List<Product> products = new ArrayList<>();
+//        productsIterable.forEach(products::add);
+//
+//        List<ProductElasticsearch> elasticsearchProducts = products.stream().map(product -> {
+//            return new ProductElasticsearch(
+//                    product.getId(),
+//                    product.getName(),
+//                    product.getPrice(),
+//                    product.getQuantity(),
+//                    product.getImage(),
+//                    product.getDescription(),
+//                    product.isActive(),
+//                    product.getCreatedAt(),
+//                    product.getUpdatedAt()
+//            );
+//        }).collect(Collectors.toList());
+//
+//        productElasticsearchRepository.saveAll(elasticsearchProducts);
+//    }
 }
